@@ -56,3 +56,16 @@ a <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/sce
 scen1_1_plot <- plot(a)
 scen1_1_plot
 ```
+
+I am trying to figure out how to assign a color to each cluster for better visualization, but the problem is that the .mem file has one fewer row than the .dat file, and I can't figure out how to fix this without just editing the files on my local machine. So I can't keep everything on github like I wanted to. I'm still figuring that out, but in the meantime I used the following code: 
+
+> scen11_dat <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.dat", sep = " ")
+> scen11_mem <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.mem", sep = " ")
+> plot_data <- cbind(scen11_dat, scen11_mem)
+> plot(plot_data$x1, plot_data$x2, col = plot_data$cluster)
+
+Hopefully I can figure out a more elegant solution using ggplot in the future. For now, the plot is on Google Drive. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Okay now I can't figure out how to 'un-name' the column in the .mem file. I even made a whole new .mem file from scratch to try and fix the problem and all the sudden R is forcing a name on the column anyway so I can't rbind. I'm giving up for now. :-(
