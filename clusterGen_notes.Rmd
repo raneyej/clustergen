@@ -2,7 +2,9 @@
 title: "clusterGeneration Notes"
 author: "Emily Raney"
 date: "11/9/2022"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -59,10 +61,12 @@ scen1_1_plot
 
 I am trying to figure out how to assign a color to each cluster for better visualization, but the problem is that the .mem file has one fewer row than the .dat file, and I can't figure out how to fix this without just editing the files on my local machine. So I can't keep everything on github like I wanted to. I'm still figuring that out, but in the meantime I used the following code: 
 
-> scen11_dat <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.dat", sep = " ")
-> scen11_mem <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.mem", sep = " ")
-> plot_data <- cbind(scen11_dat, scen11_mem)
-> plot(plot_data$x1, plot_data$x2, col = plot_data$cluster)
+```{r}
+# scen11_dat <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.dat", sep = " ")
+# scen11_mem <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.mem", sep = " ")
+# plot_data <- cbind(scen11_dat, scen11_mem)
+# plot(plot_data$x1, plot_data$x2, col = plot_data$cluster)
+```
 
 Hopefully I can figure out a more elegant solution using ggplot in the future. For now, the plot is on Google Drive. 
 
