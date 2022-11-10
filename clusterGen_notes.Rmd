@@ -1,0 +1,58 @@
+---
+title: "clusterGeneration Notes"
+author: "Emily Raney"
+date: "11/9/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Using the clusterGeneration Package
+
+Notes on the documentation for this package can be found in my MA Thesis file on Google Drive. 
+
+### Scenario 1
+
+This scenario is based on a small sample size (mirroring actual fossil data sample size) of thirty observations: 
+
+- three clusters of equal size, with moderate separation;  
+- two non-noisy variables (representing some cranial measurements- e.g., cranial capacity and supraorbital torus thickness)- I chose two variables that are less likely to be directly related (rather than something like cranial capacity and cranial length);
+- no outliers;
+- 3 replicates;
+- covMethod is eigen, but I won't set eigenvalues myself;
+- all other arguments will be set to default. 
+
+
+```{r}
+library(clusterGeneration)
+genRandomClust(3, sepVal = 0.01, numNonNoisy = 2, numNoisy = 0, fileName = "scen1")
+```
+
+
+The output of this function is several files, including a .dat file (space-delimited (?) file containing two columns representing two variables (per the number of non-noisy variables that I specified in the function) and a randomly generated number rows representing observations for both variables). 
+
+
+The other files are .noisy, .mem, and .log. 
+
+The .log files have details about the data generation including the randomly generated cluster sizes, eigenvalues for each cluster (since I didn't specify them), and information about the covariance matrices. 
+
+The .mem file seems to be a record of which cluster each observation belongs to. 
+
+The .noisy file appears to just be a file with the number of noisy variables in it? Not sure about this one. 
+
+All of the files from this analysis can be found on github. 
+
+
+#### Plotting Scen 1
+
+The .dat file is delimited with a single space. I pushed the files from the clusterGeneration output up to, then I used the curl package (or did I?) to read the .dat file into R, and then I used the base R plotting function to plot my data. 
+
+This is a plot of Scenario 1 - Replicate 1. 
+```{r}
+library(curl) #not sure if this is actually necessary
+a <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.dat", sep = " ")
+scen1_1_plot <- plot(a)
+scen1_1_plot
+```
