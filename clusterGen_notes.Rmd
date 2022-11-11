@@ -85,6 +85,7 @@ head(plot1_data)
 
 library(ggplot2)
 scen1_plot <- ggplot(plot1_data, aes(x = x1, y = x2, color = as.factor(cluster))) +geom_point() +scale_color_manual(values = c("hotpink", "turquoise2", "slateblue1")) + labs(title = "3 clusters, sepVal = 0.01", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
+```
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ### Senario 2
 
@@ -92,6 +93,7 @@ One issue I'm having with this package is that I can't figure out how to change 
 
 Scenario 2 is identical to Scenario 1, except that Scenario 2 has a sepVal of 0.99 (extremely high separation); additionally, Scenario 2 only has one replicate. 
 
+```{r}
 genRandomClust(3, sepVal = 0.99, numNonNoisy = 2, numNoisy = 0, numReplicate = 1, fileName = "scen2")
 
 scen2_dat <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen2_1.dat", sep = " ", ) #read in .dat file
@@ -102,3 +104,4 @@ head(plot2_data)
 
 scen2_plot <- ggplot(plot2_data, aes(x = x1, y = x2, color = as.factor(cluster))) +geom_point() +scale_color_manual(values = c("blueviolet", "seagreen2", "orchid1")) + labs(title = "3 clusters, sepVal = 0.99", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
 scen2_plot
+```
