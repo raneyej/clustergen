@@ -6,9 +6,9 @@
  Number of clusters >> 3
 
  cluster sizes >>
-108 78 63
+112 195 174
 
- Number of data points >> 249
+ Number of data points >> 481
 
  Number of dimensions >> 2
 
@@ -21,45 +21,45 @@
 
  initial eigenvalues for each cluster >> 
  (rows correspond to clusters)
-4.42 2.718
-5.071 2.748
-4.315 1.275
+9.365 8.574
+6.217 4.386
+1.272 7.361
 
  Mean vectors and covariance matrices before rotation --- 1th cluster >>
 
  mean vector (mu'=Q*mu)>>
--3.957 0
+-5.445 0
 
  covariance matrix (Sigma'=Q*Sigma*t(Q))>>
 
-2.83 0.421
-0.421 4.309
+9.32 0.183
+0.183 8.619
 
  Mean vectors and covariance matrices before rotation --- 2th cluster >>
 
  mean vector (mu'=Q*mu)>>
-3.957 0
+5.445 0
 
  covariance matrix (Sigma'=Q*Sigma*t(Q))>>
 
-5.605 1.744
-1.744 6.779
+5.801 0.767
+0.767 4.802
 
  Mean vectors and covariance matrices before rotation --- 3th cluster >>
 
  mean vector (mu'=Q*mu)>>
-0 6.855
+0 9.431
 
  covariance matrix (Sigma'=Q*Sigma*t(Q))>>
 
-3.39 1.399
-1.399 2.2
+2.645 -2.194
+-2.194 11.978
 
  Final eigenvalues for each cluster >> 
  (rows correspond to clusters)
-4.42 2.718
-8.032 4.352
-4.315 1.275
+9.365 8.574
+6.217 4.386
+12.468 2.155
 
  *************************************************
 
@@ -69,75 +69,75 @@
 
 
  The orthogonal matrix Q >>
-0.07 0.998
-0.998 -0.07
+0.816 0.578
+0.578 -0.816
 
  Mean vectors and covariance matrices after rotation --- 1th cluster >>
 
  mean vector (mu'=Q*mu)>>
--0.278 -3.948
+-4.445 -3.145
 
  covariance matrix (Sigma'=Q*Sigma*t(Q))>>
 
-4.361 0.313
-0.313 2.778
+9.259 0.269
+0.269 8.68
 
  Mean vectors and covariance matrices after rotation --- 2th cluster >>
 
  mean vector (mu'=Q*mu)>>
-0.278 3.948
+4.445 3.145
 
  covariance matrix (Sigma'=Q*Sigma*t(Q))>>
 
-7.017 1.645
-1.645 5.367
+6.191 0.216
+0.216 4.412
 
  Mean vectors and covariance matrices after rotation --- 3th cluster >>
 
  mean vector (mu'=Q*mu)>>
-6.838 -0.481
+5.448 -7.699
 
  covariance matrix (Sigma'=Q*Sigma*t(Q))>>
 
-2.402 1.468
-1.468 3.188
+3.69 -3.67
+-3.67 10.933
 
  Final eigenvalues for each cluster >> 
  (rows correspond to clusters)
-4.42 2.718
-8.032 4.352
-4.315 1.275
+9.365 8.574
+6.217 4.386
+12.468 2.155
 
  theoretical Separation index matrix >>
 
 -1 0.01 0.01
-0.01 -1 0.097
-0.01 0.097 -1
+0.01 -1 0.015
+0.01 0.015 -1
 
  theoretical projection directions >>
 
 **** cluster 1 and 2
--0.111 0.994
+0.768 0.64
 
 **** cluster 1 and 3
-0.967 0.255
+0.997 -0.073
 
 **** cluster 2 and 3
-0.762 -0.647
+-0.138 -0.99
 
  empirical Separation index matrix (alpha= 0.05 )>>
 
--1 -0.023 0.073
--0.023 -1 0.092
-0.073 0.092 -1
+-1 -0.006 0.043
+-0.006 -1 -0.003
+0.043 -0.003 -1
 
  empirical projection directions >>
 
 **** cluster 1 and 2
--0.133 0.991
+0.824 0.567
 
 **** cluster 1 and 3
-0.959 0.284
+0.989 -0.148
 
 **** cluster 2 and 3
-0.838 -0.546
+-0.149 -0.989
