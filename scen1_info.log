@@ -1,25 +1,25 @@
 Theoretical separation information data frame>>>>>>>>>>>
 
 cluster nearestClust nearestSep farthestClust farthestSep medianSep fileName
-1	2	0.01	3	0.01	0.01	scen1_1
-2	1	0.01	3	0.015	0.012	scen1_1
-3	1	0.01	2	0.015	0.012	scen1_1
-1	3	0.01	2	0.01	0.01	scen1_2
-2	1	0.01	3	0.028	0.019	scen1_2
-3	1	0.01	2	0.028	0.019	scen1_2
-1	2	0.01	3	0.026	0.018	scen1_3
-2	1	0.01	3	0.01	0.01	scen1_3
-3	2	0.01	1	0.026	0.018	scen1_3
+1	3	0.01	2	0.068	0.039	scen1_1
+2	3	0.01	1	0.068	0.039	scen1_1
+3	2	0.01	1	0.01	0.01	scen1_1
+1	2	0.01	3	0.129	0.069	scen1_2
+2	3	0.01	1	0.01	0.01	scen1_2
+3	2	0.01	1	0.129	0.069	scen1_2
+1	2	0.01	3	0.054	0.032	scen1_3
+2	3	0.01	1	0.01	0.01	scen1_3
+3	2	0.01	1	0.054	0.032	scen1_3
 
 Empirical separation information data frame>>>>>>>>>>>
 
 cluster nearestClust nearestSep farthestClust farthestSep medianSep fileName
-1	2	-0.006	3	0.043	0.018	scen1_1
-2	1	-0.006	3	-0.003	-0.005	scen1_1
-3	2	-0.003	1	0.043	0.02	scen1_1
-1	3	0.011	2	0.042	0.026	scen1_2
-2	3	0	1	0.042	0.021	scen1_2
-3	2	0	1	0.011	0.005	scen1_2
-1	2	0.012	3	0.022	0.017	scen1_3
-2	1	0.012	3	0.03	0.021	scen1_3
-3	1	0.022	2	0.03	0.026	scen1_3
+1	2	0.059	3	0.093	0.076	scen1_1
+2	3	0.023	1	0.059	0.041	scen1_1
+3	2	0.023	1	0.093	0.058	scen1_1
+1	2	-0.039	3	0.163	0.062	scen1_2
+2	1	-0.039	3	0.044	0.003	scen1_2
+3	2	0.044	1	0.163	0.104	scen1_2
+1	2	0.014	3	0.088	0.051	scen1_3
+2	1	0.014	3	0.068	0.041	scen1_3
+3	2	0.068	1	0.088	0.078	scen1_3
