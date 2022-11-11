@@ -38,3 +38,28 @@ plot2_data <- cbind(d, b)
 head(plot2_data)
 #bind the two files to plot according to cluster 
 
+library(ggplot2)
+
+my_colors <- c("red", "blue", "green")
+
+scen2_plot <- ggplot(plot2_data, aes(x = x1, y = x2, color = as.factor(cluster))) +geom_point() +scale_color_manual(values = c("blueviolet", "seagreen2", "orchid1")) + labs(title = "3 clusters, sepVal = 0.99", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
+scen2_plot
+
+scen1_dat_fixed <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.dat", sep = " ")
+scen1_mem_fixed <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.mem", sep = " ", header = FALSE, col.names = "cluster")
+
+plot1_data <- cbind(scen1_dat_fixed, scen1_mem_fixed)
+head(plot1_data)
+
+
+scen1_plot <- ggplot(plot1_data, aes(x = x1, y = x2, color = as.factor(cluster))) +geom_point() +scale_color_manual(values = c("hotpink", "turquoise2", "slateblue1")) + labs(title = "3 clusters, sepVal = 0.01", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
+scen1_plot
+
+scen1_dat_fixed <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.dat", sep = " ") #read in .dat file 
+scen1_mem_fixed <- read.delim("https://raw.githubusercontent.com/raneyej/clustergen/master/scen1_1.mem", sep = " ", header = FALSE, col.names = "cluster") #read in .mem file, set heading to false, add column name 'cluster'
+
+plot1_data <- cbind(scen1_dat_fixed, scen1_mem_fixed) #column binding variable values with the cluster they belong to 
+head(plot1_data)
+
+library(ggplot2)
+scen1_plot <- ggplot(plot1_data, aes(x = x1, y = x2, color = as.factor(cluster))) +geom_point() +scale_color_manual(values = c("hotpink", "turquoise2", "slateblue1")) + labs(title = "3 clusters, sepVal = 0.01", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
