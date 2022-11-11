@@ -105,3 +105,5 @@ head(plot2_data)
 scen2_plot <- ggplot(plot2_data, aes(x = x1, y = x2, color = as.factor(cluster))) +geom_point() +scale_color_manual(values = c("blueviolet", "seagreen2", "orchid1")) + labs(title = "3 clusters, sepVal = 0.99", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
 scen2_plot
 ```
+
+ 
