@@ -1,0 +1,27 @@
+Theoretical separation information data frame>>>>>>>>>>>
+
+cluster nearestClust nearestSep farthestClust farthestSep medianSep fileName
+1	3	0.5	2	0.559	0.529	sceny_1
+2	4	0.5	1	0.559	0.509	sceny_1
+3	1	0.5	5	0.567	0.518	sceny_1
+4	2	0.5	6	0.553	0.546	sceny_1
+5	2	0.5	3	0.567	0.558	sceny_1
+6	7	0.5	8	0.576	0.529	sceny_1
+7	6	0.5	5	0.566	0.522	sceny_1
+8	9	0.5	6	0.576	0.5	sceny_1
+9	8	0.5	6	0.504	0.502	sceny_1
+10	8	0.5	8	0.5	0.5	sceny_1
+
+Empirical separation information data frame>>>>>>>>>>>
+
+cluster nearestClust nearestSep farthestClust farthestSep medianSep fileName
+1	3	0.495	10	0.885	0.799	sceny_1
+2	5	0.487	10	0.855	0.693	sceny_1
+3	1	0.495	10	0.865	0.715	sceny_1
+4	2	0.523	10	0.8	0.661	sceny_1
+5	2	0.487	10	0.857	0.715	sceny_1
+6	7	0.489	1	0.844	0.752	sceny_1
+7	9	0.484	1	0.799	0.649	sceny_1
+8	10	0.484	1	0.856	0.712	sceny_1
+9	7	0.484	1	0.845	0.715	sceny_1
+10	8	0.484	1	0.885	0.8	sceny_1

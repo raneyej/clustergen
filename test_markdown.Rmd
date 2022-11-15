@@ -1,0 +1,62 @@
+---
+title: "Test Work"
+author: "Emily Raney"
+date: "2022-11-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###clusterGeneration generates a number of files as its output for each run (.mem, .dat, .log etc.). After these files are generated, I push them up to github and read them back into R using the read.delim function (the file is a github raw URL). When I knit my RMarkdown document to HTML, it re-runs the clusterGeneration function and generates new files, rendering the github URLs with the old files useless. Here, I'm trying to read the files using a local filepath to see if that solves the problem. 
+
+```{r}
+library(clusterGeneration)
+genRandomClust(3, sepVal = 0.01, numNonNoisy = 2, numNoisy = 0, numReplicate = 1, fileName = "scenx")
+
+x_mem <- read.delim("/Users/emilyraney/Desktop/clustergen-master/clustergen/scenx_1.mem", header = FALSE, sep = " ")
+head(x_mem)
+
+x_dat <- read.delim("/Users/emilyraney/Desktop/clustergen-master/clustergen/scenx_1.dat", sep = " ")
+head(x_dat)
+
+x_p_data <- cbind(x_dat, x_mem)
+head(x_p_data)
+
+library(ggplot2)
+x_plot <- ggplot(x_p_data, aes(x = x1, y = x2, color = as.factor(V1))) + geom_point() + scale_color_manual(values = c("plum1", "mediumorchid1", "purple2")) + labs(title = "3 clusters, sepVal = 0.01", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
+x_plot
+
+genRandomClust(10, sepVal = 0.5, numNonNoisy = 2, numReplicate = 1, fileName = "sceny")
+y_mem <- read.delim("/Users/emilyraney/Desktop/clustergen-master/clustergen/sceny_1.mem", header = FALSE, sep = " ")
+head(y_mem)
+
+y_dat <- read.delim("/Users/emilyraney/Desktop/clustergen-master/clustergen/sceny_1.dat", sep = " ")
+head(y_dat)
+
+y_p_data <- cbind( y_dat, y_mem)
+head(y_p_data)
+
+y_plot <- ggplot(y_p_data, 
+                 aes(x = x1, y = x2, color = as.factor(V1))) + geom_point() + scale_color_manual(
+                   values = c("plum1", "maroon1", "orangered1", "red1", "darkorange", "yellow", "olivedrab1", "deepskyblue", "mediumorchid1", "purple2")
+                 ) + labs(title = "10 clusters, sepVal = 0.5", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
+y_plot
+
+genRandomClust(7, sepVal = 0.2, numNonNoisy = 2, numReplicate = 1, fileName = "scenz")
+z_mem <- read.delim("/Users/emilyraney/Desktop/clustergen-master/clustergen/scenz_1.mem", header = FALSE, sep = " ")
+head(z_mem)
+
+z_dat <- read.delim("/Users/emilyraney/Desktop/clustergen-master/clustergen/scenz_1.dat", sep = " ")
+head(z_dat)
+
+z_p_data <- cbind(z_dat, z_mem)
+head(z_p_data)
+
+z_plot <- ggplot(z_p_data, 
+                 aes(x = x2, y = x2, color = as.factor(V1))) + geom_point() + scale_color_manual(
+                   values = c("plum1", "magenta", "purple1", "magenta4", "violetred", "hotpink", "darkorchid1")
+                 ) + labs(title = "7 clusters, sepVal = 0.2", color = "Cluster") + xlab("Variable 1") + ylab("Variable 2")
+z_plot
+```

@@ -1,0 +1,13 @@
+Theoretical separation information data frame>>>>>>>>>>>
+
+cluster nearestClust nearestSep farthestClust farthestSep medianSep fileName
+1	2	0.01	3	0.029	0.019	scenx_1
+2	1	0.01	3	0.01	0.01	scenx_1
+3	2	0.01	1	0.029	0.019	scenx_1
+
+Empirical separation information data frame>>>>>>>>>>>
+
+cluster nearestClust nearestSep farthestClust farthestSep medianSep fileName
+1	3	0.014	2	0.019	0.016	scenx_1
+2	1	0.019	3	0.027	0.023	scenx_1
+3	1	0.014	2	0.027	0.021	scenx_1
